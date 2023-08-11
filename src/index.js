@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import { store } from './app/store';
@@ -9,6 +10,7 @@ import 'bootstrap-social/bootstrap-social.css';
 import 'font-awesome/css/font-awesome.css';
 import 'typeface-lobster';
 import 'typeface-open-sans';
+import { Router } from 'react-router-dom';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
@@ -16,7 +18,9 @@ const root = createRoot(container);
 root.render(
     <React.StrictMode>
         <Provider store={store}>
-            <App />
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
         </Provider>
     </React.StrictMode>
 );
