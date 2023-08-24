@@ -1,12 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
-import ContactPage from './pages/ContactPage';
-import HomePage from './pages/HomePage';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import CampsitesDirectoryPage from './pages/CampsitesDirectoryPage';
-import CampsiteDetailPage from './pages/CampsiteDetailPage';
-import AboutPage from './pages/AboutPage';
+// import ContactPage from './pages/ContactPage';
+// import HomePage from './pages/HomePage';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+import { Header, Footer } from './components';
+import { CampsitesDirectoryPage, CampsiteDetailPage, AboutPage, ContactPage, HomePage, } from "./pages";
+// import CampsiteDirectoryPage from './pages/CampsiteDirectoryPage';
+// import CampsiteDetailPage from './pages/CampsiteDetailPage';
+// import AboutPage from './pages/AboutPage';
+// import { CampsiteDetailPage } from './pages';
 import './App.css';
+
 
 function App() {
     return (
