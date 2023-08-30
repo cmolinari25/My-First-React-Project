@@ -12,6 +12,7 @@ import { CampsitesDirectoryPage, CampsiteDetailPage, AboutPage, ContactPage, Hom
 // import AboutPage from './pages/AboutPage';
 // import { CampsiteDetailPage } from './pages';
 import { fetchCampsites } from './features/campsites/campsitesSlice';
+import { fetchPartners } from './features/partners/partnersSlice';
 import './App.css';
 
 
@@ -20,8 +21,9 @@ function App() {
 
     useEffect(() => {
         dispatch(fetchCampsites());
+        dispatch(fetchPartners());
     }, [dispatch]);
-
+    
     return (
         <div className='App'>
             <Header />
