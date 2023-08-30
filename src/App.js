@@ -1,18 +1,27 @@
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 // import ContactPage from './pages/ContactPage';
 // import HomePage from './pages/HomePage';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
 import { Header, Footer } from './components';
-import { CampsitesDirectoryPage, CampsiteDetailPage, AboutPage, ContactPage, HomePage, } from "./pages";
+import { CampsitesDirectoryPage, CampsiteDetailPage, AboutPage, ContactPage, HomePage } from "./pages";
 // import CampsiteDirectoryPage from './pages/CampsiteDirectoryPage';
 // import CampsiteDetailPage from './pages/CampsiteDetailPage';
 // import AboutPage from './pages/AboutPage';
 // import { CampsiteDetailPage } from './pages';
+import { fetchCampsites } from './features/campsites/campsitesSlice';
 import './App.css';
 
 
 function App() {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchCampsites());
+    }, [dispatch]);
+
     return (
         <div className='App'>
             <Header />
